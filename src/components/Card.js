@@ -2,7 +2,7 @@ import { auth, db } from "../firebase/config";
 import { doc, deleteDoc } from "firebase/firestore";
 
 export const Card = ({post, login, setToggle}) => {
-    const { id, title, description, author } = post;
+    const { id, title, description, author, date } = post;
 
     async function handleDelete(){
         const document = doc(db, "posts", id);
@@ -15,6 +15,7 @@ export const Card = ({post, login, setToggle}) => {
         <section className='my-5 px-4 '>
             <p className='text-xl text-gray-800 dark:text-gray-200 font-semibold md:text-2xl my-2'>{title}</p>
             <p className='text-sm text-gray-800 dark:text-gray-200 md:text-xl my-2'>{description}</p>
+            <p className='text-xm text-gray-700 dark:text-gray-400 md:text-sm my-2'>{date}</p>
             <div className="flex justify-between items-center"> 
                 <span className='text-gray-800 dark:text-gray-200 border rounded border-gray-950 dark:border-gray-100 px-2'>{author.name}</span>
                 { IsAuthor && <span onClick={handleDelete}><i className="bi bi-trash text-red-600 cursor-pointer"></i></span> }

@@ -1,3 +1,5 @@
+"Pendown" is a platform where users can read and create posts, utilizing Firebase for real-time data management. The integration with Firebase allows for seamless updates and retrieval of posts. Additionally, the app leverages Google Authentication, providing users a secure and convenient way to log in using their Google accounts. This combination of Firebase's database and authentication services ensures a smooth and efficient user experience on the platform.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
